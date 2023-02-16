@@ -19,7 +19,7 @@
 </head>
 
 <body>
-   <header class="header container">
+   <header class="header header-container">
       <nav class="header__nav navigation">
          <div class="header__link-wrap">
             <a class="header__nav-link" href="/index.html">
@@ -42,27 +42,49 @@
          </div>
       </nav>
    </header>
-   <section class="section main container">
-      <h1 class="main__title title">From 1 to 7 in two Circles</h1>
-      <span class="main__title-line"></span>
-      <div class="main-wrap">
-         <div class="main-wrap-elem">
+   <section class="section main ">
+
+      <h1 class="main__title container title">From 1 to 7 in two Circles</h1>
+      <div class="main__title-line-wrap"><span class="main__title-line"></span></div>
+
+
+      <div class="main-wrap container">
+         <div class="main-wrap-img">
             <img class="main__img" src="./img/From 1 to 7 in two Circles_puzzle_V1.svg"
                alt="From 1 to 7 in two Circles_puzzle">
          </div>
-         <div class="main-wrap-elem">
+         <div class="main-wrap-text">
             <p class="main__text">
                Digits 1 through 7 have to be filled into the seven circles so that the sum on the big
                circumference, the sum on the small circumference and each of the three sums on the straight
                segments are all 12.
             </p>
+            <br>
             <p class="main__text">What digit will go into the middle circle? Can you prove it?</p>
          </div>
-         <div class="main-wrap-elem">
-            <button type="button" class="button link"><span class="button-text">4</span></button>
-            <button type="button" class="button link"><span class="button-text">5</span></button>
-            <button type="button" class="button link"><span class="button-text">6</span></button>
-            <button type="button" class="button link"><span class="button-text">7</span></button>
+         <div class="main-wrap-button js-actions">
+
+            <button id="1" type="button" class="button  link"><span class="button-text">1st place</span>
+               <div class="button__check">
+                  <p class="button__check-text">Check</p>
+               </div>
+            </button>
+            <button id="2" type="button" class="button link"><span class="button-text">5</span>
+               <div class="button__check">
+                  <p class="button__check-text">Check</p>
+               </div>
+            </button>
+            <button id="3" type="button" class="button link"><span class="button-text">6</span>
+               <div class="button__check">
+                  <p class="button__check-text">Check</p>
+               </div>
+            </button>
+            <button id="4" type="button" class="button link"><span class="button-text">7</span>
+               <div class="button__check">
+                  <p class="button__check-text">Check</p>
+               </div>
+            </button>
+
          </div>
       </div>
    </section>
@@ -161,6 +183,7 @@
 
 
    <script src="./js/dropdown.js" type="module"></script>
+   <script src="./js/button.js" type="module"></script>
 </body>
 
 </html>
