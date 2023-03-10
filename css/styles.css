@@ -579,8 +579,8 @@ img {
 
 .card__item-wrap {
   display: flex;
-  height: 177px;
-  width: 275px;
+  height: 280px;
+  width: 410px;
   box-shadow: 2px 2px 5px #b5b2b3;
   border-radius: 20px;
   overflow: hidden;
@@ -590,7 +590,7 @@ img {
   position: relative;
   bottom: 30px;
   right: 55px;
-  height: 240px;
+  height: 350px;
 }
 .card__item-text {
   font-size: 18px;
