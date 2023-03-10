@@ -139,14 +139,14 @@ img {
   position: relative;
 }
 .dropdown {
-  position: relative;
-  margin-left: 145px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .dropdown__button {
-  position: relative;
   display: block;
   width: 619px;
+  position: relative;
   text-align: left;
 
   background-color: var(--white-bgc);
@@ -155,10 +155,9 @@ img {
   height: 32px;
   color: var(--item-block-bgc);
 
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 10px;
-  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px 25px 7px 10px;
 
   outline: none;
   cursor: pointer;
@@ -292,15 +291,22 @@ img {
 
 /* =================== main section ================== */
 .main {
+  min-width: 1440px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f6f9ff;
 }
 
 .main__title {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.1;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 32px;
   margin-top: 15px;
 }
 
-.main__title-line-wrap {
+/* .main__title-line-wrap {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -310,12 +316,14 @@ img {
   width: 1130px;
   height: 1px;
   background-color: var(--item-block-bgc);
-}
+} */
 
 .main-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  /* gap: 120px; */
+  align-items: center;
+  justify-content: space-evenly;
   padding-top: 20px;
 }
 
@@ -323,16 +331,18 @@ img {
   /* width: 600px; */
 }
 .main-wrap-text {
-  width: 250px;
+  width: 310px;
+  padding-bottom: 75px;
 }
 .main-wrap-button {
-  width: 300px;
-  padding-top: 245px;
+  /* width: 300px; */
+  /* padding-top: 245px; */
+  display: grid;
+  align-items: center;
 }
 
 .main__img {
-  width: 500px;
-  height: 500px;
+  width: 400px;
 }
 
 .main__text {
@@ -344,7 +354,8 @@ img {
 
 /* ============button=========== */
 .button {
-  min-width: 290px;
+  min-width: 330px;
+  height: 40px;
   flex: 0 1 50%;
   border-radius: 30px;
   background: #9dd53a;
@@ -370,7 +381,7 @@ img {
     #7cbc0a 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dd53a', endColorstr='#7cbc0a', GradientType=0);
-  margin: 0 0 12px 0;
+  margin: 0 0 6px 0;
   border: 1px solid #b8e073;
   position: relative;
 }
@@ -380,7 +391,7 @@ img {
   left: 0;
   bottom: 0;
   margin: 4px 200px 4px 4px;
-  padding: 2% 4%;
+
   border: 2px solid #ffffff;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -443,21 +454,72 @@ img {
 }
 
 .active--error {
-  background: red;
+  background: #f85032;
+  background: -moz-linear-gradient(
+    top,
+    #f85032 0%,
+    #f16f5c 50%,
+    #f6290c 51%,
+    #f02f17 71%,
+    #e73827 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #f85032),
+    color-stop(50%, #f16f5c),
+    color-stop(51%, #f6290c),
+    color-stop(71%, #f02f17),
+    color-stop(100%, #e73827)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #f85032 0%,
+    #f16f5c 50%,
+    #f6290c 51%,
+    #f02f17 71%,
+    #e73827 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    #f85032 0%,
+    #f16f5c 50%,
+    #f6290c 51%,
+    #f02f17 71%,
+    #e73827 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    #f85032 0%,
+    #f16f5c 50%,
+    #f6290c 51%,
+    #f02f17 71%,
+    #e73827 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    #f85032 0%,
+    #f16f5c 50%,
+    #f6290c 51%,
+    #f02f17 71%,
+    #e73827 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f85032', endColorstr='#e73827', GradientType=0);
 }
 
 .button-text {
   display: flex;
   justify-content: center;
-  padding: 12px 5px;
+  padding: 0px 5px;
   color: var(--secondary-text-color);
 
-  font-size: 120%;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .button.clicked {
-  background: red;
+  background: #f85032;
 }
 
 .button__check {
@@ -478,7 +540,17 @@ img {
 .button__check-text {
   color: #ffffff;
   font-size: 20px;
-  vertical-align: middle;
+  padding: 1px 12px;
+}
+
+.main__button-next {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.button-next {
+  width: 600px;
 }
 /* =================== section card =================== */
 
