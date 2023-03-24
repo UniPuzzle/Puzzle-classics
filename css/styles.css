@@ -591,35 +591,64 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
+  background-color: var(--bcg-color);
+  border-radius: 15px;
+  padding: 15px;
 }
 
 .card__link:hover .card__item-wrap {
   box-shadow: 4px 4px 7px #b5b2b3;
 }
 
+.card__link {
+  display: flex;
+}
+
 .card__item-wrap {
   display: flex;
-  height: 280px;
-  width: 410px;
+  height: 172px;
+  min-width: 236px;
   box-shadow: 2px 2px 5px #b5b2b3;
   border-radius: 20px;
   overflow: hidden;
+  background-color: white;
 }
 
 .card__item-img {
   position: relative;
-  bottom: 30px;
+  bottom: 5px;
   right: 55px;
-  height: 350px;
+  height: 193px;
 }
 .card__item-text {
+  position: relative;
   font-size: 18px;
   line-height: 1.1;
+  display: flex;
   font-weight: 800;
   margin-top: 20px;
-  width: 255px;
-  padding: 0 0 0 10px;
+  /* width: 255px; */
+  padding: 0 0 0 20px;
   color: var(--item-block-bgc);
+  align-items: center;
+}
+
+.card__item-text::after {
+  content: '';
+  display: block;
+  position: absolute;
+
+  top: 66px;
+  left: 153px;
+  width: 31px;
+  height: 31px;
+  text-align: center;
+  background-image: url(../img/svg/arrow-right2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card__button {
