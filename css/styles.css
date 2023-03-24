@@ -633,7 +633,7 @@ img {
   align-items: center;
 }
 
-.card__item-text::after {
+/* .card__item-text::after {
   content: '';
   display: block;
   position: absolute;
@@ -643,13 +643,13 @@ img {
   width: 31px;
   height: 31px;
   text-align: center;
-  background-image: url(../img/svg/arrow-right2.svg);
+  background-image: url(../img/svg/Arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .card__button {
   display: flex;
