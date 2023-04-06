@@ -724,6 +724,8 @@ img {
 }
 .card__item-text--big {
   font-size: 56px;
+  padding-right: 20px;
+  margin-left: auto;
 }
 
 /* .card__item-text::after {
