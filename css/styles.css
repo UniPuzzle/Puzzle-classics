@@ -1264,7 +1264,7 @@ img {
   line-height: 50px;
   /* background: #fff; */
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  /* box-shadow: 2px 2px 5px #9dd53a; */
   transform: translateY(-50%);
   transition: transform 0.1s linear;
   background: #9dd53a;
@@ -1290,6 +1290,21 @@ img {
     #7cbc0a 100%
   );
 }
+
+.fa-angle-left {
+  box-shadow: -2px 2px 5px #9dd53a;
+}
+.fa-angle-right {
+  box-shadow: 2px 2px 5px #9dd53a;
+}
+
+.fa-angle-left:hover {
+  box-shadow: -2px 2px 5px #7cbc0a;
+}
+.fa-angle-right:hover {
+  box-shadow: 2px 2px 5px #7cbc0a;
+}
+
 .wrapper i:active {
   transform: translateY(-50%) scale(0.85);
 }
@@ -1346,6 +1361,7 @@ img {
   margin: 0 auto;
   scroll-snap-align: center;
 }
+
 /* .carousel .card .img {
   background: #8b53ff;
   height: 148px;
