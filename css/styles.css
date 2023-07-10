@@ -586,10 +586,10 @@ img {
 }
 /* =================== section card =================== */
 
-.card {
+/* .card {
   padding-top: 25px;
   padding-bottom: 60px;
-}
+} */
 
 .card__title {
   font-size: 24px;
@@ -938,66 +938,74 @@ img {
 }
 
 /* =========== */
+
 .card__container {
   width: 1440px;
   display: flex;
   justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  /* padding-top: 40px;
+  padding-bottom: 40px; */
   margin-left: auto;
   margin-right: auto;
 }
 .card__list {
-  display: flex;
+  /* display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
+  height: 100%;
   padding: 0;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; */
+  /* padding: 20px 0 0 0; */
 }
-
+.card__list::-webkit-scrollbar {
+  width: 0;
+}
 .card__list::before {
   content: '';
   position: absolute;
-  width: 36%;
-  height: 75vh;
-  z-index: 2;
+  width: 40%;
+  height: 530px;
+  z-index: 1;
   border-radius: 25px;
-  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.2);
-  filter: blur(13px);
-  background: rgb(250 255 255 / 70%);
+  left: -20px;
+  filter: blur(8px);
+  background: rgb(250 255 255 / 65%);
+  box-shadow: 200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
+  -webkit-box-shadow: 200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
+  -moz-box-shadow: 200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
 }
 .card__list::after {
   content: '';
   position: absolute;
-  right: 0;
   width: 40%;
-  height: 75vh;
-  z-index: 2;
-  /* border-radius: 25px; */
-  box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.2);
-  filter: blur(13px);
-  background: rgb(250 255 255 / 70%);
+  height: 530px;
+  z-index: 1;
+  border-radius: 25px;
+  right: -20px;
+  filter: blur(8px);
+  background: rgb(250 255 255 / 65%);
+  box-shadow: -200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
+  -webkit-box-shadow: -200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
+  -moz-box-shadow: -200px 0px 287px 38px rgba(255, 255, 255, 1) inset;
 }
 
-.card__item {
+/* .card__item {
   flex-shrink: 0;
   width: 20%;
   height: 100%;
   margin: 0 auto;
   scroll-snap-align: center;
-}
+} */
 .card-text {
   display: block;
   text-align: center;
-  align-content: center;
+
   font-size: 15px;
   height: 110px;
-
   font-weight: 400;
   line-height: 1.1;
-
-  padding: 52px 5px 0px 5px;
+  padding: 16px 5px 0px 5px;
+  margin-bottom: 20px;
 }
 .card__link:hover .card__item-wrap {
   box-shadow: 4px 4px 7px #b5b2b3;
@@ -1008,7 +1016,7 @@ img {
   top: 10px;
 
   width: 90%;
-  height: 550px;
+  /* height: 550px; */
   margin: 0 auto;
 
   box-shadow: 2px 2px 5px #b5b2b3;
@@ -1018,9 +1026,9 @@ img {
 }
 
 .card__item-img {
-  position: relative;
+  /* position: relative;
   top: 7%;
-  left: 0px;
+  left: 0px; */
   /* height: 59%; */
 }
 
@@ -1032,8 +1040,8 @@ img {
   /* margin: 0 auto; */
   font-weight: 400;
   line-height: 1.1;
-  margin-top: 25px;
-  /* padding: 0 0 0 10px; */
+  /* margin-top: 25px; */
+  padding: 15px;
   /* color: var(--item-block-bgc); */
 }
 
@@ -1041,7 +1049,7 @@ img {
 .card__button-group {
   display: flex;
   justify-content: space-between;
-  margin-top: 20%;
+  margin-bottom: 11px;
 }
 .card__button-left {
   border-radius: 0px 30px 30px 0px;
@@ -1050,8 +1058,8 @@ img {
   border-radius: 30px 0px 0px 30px;
 }
 .card__button {
-  width: 100px;
-  height: 25px;
+  width: 120px;
+  height: 27px;
   flex: 0 1 50%;
   /* border-radius: 30px; */
   background: #9dd53a;
@@ -1232,4 +1240,143 @@ img {
 
 .card__button.clicked {
   background: #f85032;
+}
+
+/* ====================== */
+
+/* ================== */
+.wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 1440px;
+  width: 100%;
+  height: 530px;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 38px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  /* background: #fff; */
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  background: #9dd53a;
+  background: -moz-linear-gradient(
+    top,
+    #9dd53a 0%,
+    #a1d54f 50%,
+    #80c217 51%,
+    #7cbc0a 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #9dd53a 0%,
+    #a1d54f 50%,
+    #80c217 51%,
+    #7cbc0a 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    #9dd53a 0%,
+    #a1d54f 50%,
+    #80c217 51%,
+    #7cbc0a 100%
+  );
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+  left: -10px;
+  z-index: 2;
+}
+.wrapper i:last-child {
+  right: -10px;
+  z-index: 2;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  /* border-radius: 8px; */
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card__item {
+  cursor: grab;
+  user-select: none;
+}
+/* .carousel :where(.card__item, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.carousel .card__item {
+  scroll-snap-align: start;
+  /* height: 342px; */
+  /* list-style: none; */
+  /* background: #fff; */
+  cursor: pointer;
+  /* padding-bottom: 15px; */
+  /* flex-direction: column; */
+  /* border-radius: 8px; */
+  flex-shrink: 0;
+  width: 100%;
+  /* height: 100vh; */
+  margin: 0 auto;
+  scroll-snap-align: center;
+}
+/* .carousel .card .img {
+  background: #8b53ff;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+} */
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
 }
